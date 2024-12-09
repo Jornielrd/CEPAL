@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Bahamas: Desarrollo Económico y Corrupción</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003060;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #00509e;
+        }
+        section {
+            padding: 20px;
+            display: none;
+        }
+        section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Las Bahamas: Desarrollo Económico y Transparencia</h1>
+</header>
+
+<nav>
+    <a href="#" data-section="inicio">Inicio</a>
+    <a href="#" data-section="panorama">Panorama Económico</a>
+    <a href="#" data-section="corrupcion">Corrupción y Transparencia</a>
+    <a href="#" data-section="desarrollo">Desarrollo Económico</a>
+</nav>
+
+<section id="inicio" class="active">
+    <h2>Bienvenido</h2>
+    <p>Esta página aborda las estrategias de Las Bahamas para combatir la corrupción y fomentar un desarrollo económico sostenible en el Caribe.</p>
+</section>
+
+<section id="panorama">
+    <h2>Panorama Económico</h2>
+    <p>Las Bahamas dependen en gran medida del turismo y los servicios financieros. El turismo representa más del 60% del PIB, mientras que la banca internacional también juega un papel clave.</p>
+    <p>PIB (2023): $12,700 millones. Principales socios comerciales: Estados Unidos, Canadá, y países de Europa.</p>
+</section>
+
+<section id="corrupcion">
+    <h2>Corrupción y Transparencia</h2>
+    <p>Las Bahamas tienen un historial de baja corrupción en comparación con otros países del Caribe. Sin embargo, los desafíos persisten en cuanto a la implementación de leyes de transparencia y el fortalecimiento de instituciones.</p>
+</section>
+
+<section id="desarrollo">
+    <h2>Desarrollo Económico Integral</h2>
+    <p>Para fomentar el desarrollo, Las Bahamas están invirtiendo en energías renovables, diversificación de la economía y modernización de infraestructuras.</p>
+    <p>Programas sociales y educativos también son esenciales para garantizar una fuerza laboral preparada.</p>
+</section>
+
+<footer>
+    <p>Modelo de Naciones Unidas - CEPAL 2024</p>
+</footer>
+
+<script>
+    // Cambiar entre secciones
+    const navLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const sectionID = event.target.getAttribute('data-section');
+
+            sections.forEach(section => {
+                section.classList.remove('active');
+                if (section.id === sectionID) {
+                    section.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
